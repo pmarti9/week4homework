@@ -1,47 +1,80 @@
-body {
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+body{
+	font-size: 20px;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
+}
+#quiz{
+    color: whitesmoke;
+}
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+button{
+  font-family: 'Work Sans', sans-serif;
+	font-size: 22px;
+	background-color: black;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#previous{
     background-color: black;
-    text-align: center;
-    color: whitesmoke;
 }
-h1 {
-    color: whitesmoke;
-    font-weight: bold;
-    text-align: center;
+#next{
+    background-color: black;
 }
-#submitQuiz{
-    background-color: lightsalmon;
-    color: whitesmoke;
-    
+#submit{
+    background-color: black;
 }
-.jumbotron {
-    position:relative;
-    overflow:hidden;
-    background-color: whitesmoke;
-  }
-  
-  .jumbotron .container {
-    position:relative;
-    z-index: 2;
-    
-    background:rgba(0,0,0,0.2);
-    padding:2rem;
-    border:1px solid rgba(0,0,0,0.1);
-    border-radius:3px;
-  }
-  
-  /* .jumbotron-background {
-    object-fit:cover;
-    font-family: 'object-fit: cover;';
-    position:absolute;
-    top:0;
-    z-index:1;
-    width:100%;
-    height:100%;
-    opacity:0.5;
-  }
-  
-  img.blur {
-      -webkit-filter: blur(4px);
-      filter: blur(4px);
-    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
-   */
+button:hover{
+	background-color: red;
+}
+
+
+
+
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}

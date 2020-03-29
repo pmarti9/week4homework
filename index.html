@@ -10,19 +10,23 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-            <div class="jumbotron jumbotron-fluid bg-dark">
+            <div class="jumbotron jumbotron-fluid bg-secondary">
                     <div class="container text-white text-center">
-                    <h1 class="display-4">Take my quiz! Good luck, you will need it.</h1>
+                    <h1 class="display-4" style="background-color: black;">Take my quiz! Good luck, you will need it.</h1>
                     <p class="lead">Try to answer the following questions within the time limit.</p>
-                    <a class="btn btn-primary btn-lg" id="startBtn" href="#" role="button">Start Quiz</a>
+                    
                     </div>
-            
-            <div class="quiz" id="quiz" data-toggle="buttons">
-            
-        
-        <!-- <button id="submit">Submit Quiz</button> -->
-        <div id="results">
-        </div>
+                   
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<br />
+<br />
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+       
         <div id="time">
 
         </div>
