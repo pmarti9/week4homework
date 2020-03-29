@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    text-align: center;
+    color: whitesmoke;
+}
+h1 {
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+#submitQuiz{
+    background-color: lightsalmon;
+    color: whitesmoke;
+    
+}
