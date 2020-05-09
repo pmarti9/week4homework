@@ -1,40 +1,69 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <title>Code Quiz</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-            <div class="jumbotron jumbotron-fluid bg-secondary">
-                    <div class="container text-white text-center">
-                    <h1 class="display-4" style="background-color: black;">Take my quiz! Good luck, you will need it.</h1>
-                    <p class="lead">Try to answer the following questions within the time limit.</p>
-                    
-                    </div>
-                   
-<div class="quiz-container">
-  <div id="quiz"></div>
-</div>
-<br />
-<br />
-<button id="previous">Previous Question</button>
-<button id="next">Next Question</button>
-<button id="submit">Submit Quiz</button>
-<div id="results"></div>
-       
-        <div id="time">
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker's Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="start-screen">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Parker's Quiz!</h1>
+                    <p class="lead">Take my Quiz, if you dare!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <button type="button" id="beginQuiz" class="btn btn-block btn-outline-info">Start Quiz!</button>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
         </div>
-        <div id="score">
+        <div id="questions" class="row hide">
+            <h2 id="timer"></h2>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h2 id='question-title'>Hi!</h2>
+                <div id="choices"></div>
+            </div>
+            <h3 id="feedback" class="hide"></h3>
+        </div>
+        <div id="end-screen" class="row hide">
+            <div class="col-md-12">
+                <h2>Score: <span id="final-score"></span></h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username"
+                        aria-label="Recipient's username" aria-describedby="initials" id="initials">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-info" type="button" id="submit">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div id="highscore-screen" class="row hide">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">High Scores!!!!!!</h1>
+                       
+                    </div>
+                </div>
+                <ol id="highscores"></ol>
+                <button type="button" id="restart" class="btn btn-block btn-outline-info">Restart Quiz!</button>
+            </div>
         </div>
 
     </div>
-        <script src="./script.js" ></script>
-    </body>
+    <script src="./script.js"></script>
+</body>
+
 </html>
